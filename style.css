@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+ 
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+ 
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+ 
+#rabbit-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+ 
+#rabbit {
+    width: 100px;
+    height: auto;
+}
+ 
+#message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+ 
+#love-message {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 0, 77, 0.8);
+    border-radius: 10px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+ 
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ff0080; }
+    100% { text-shadow: 0 0 20px #ff0040; }
+}
+ 
+.rose, .kiss {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
+}
+ 
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
